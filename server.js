@@ -1,9 +1,5 @@
 const express = require('express');
 const hbs = require('express-handlebars');
-
-// const cf = require('cross-fetch');
-
-// import { fetch } from 'cross-fetch';
 require('cross-fetch/polyfill');
 
 const app = express();
