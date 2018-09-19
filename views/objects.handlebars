@@ -1,0 +1,14 @@
+<h1>Object Listing for Gallery {{gallery}}</h1>
+<table class='table table-striped'>
+  {{#each objects}}
+    <tr>
+      <td>
+        <a href="/object/{{this.id}}">
+          {{this.title}}
+        </a>
+      </td>
+      <td><img class='gallery-image' src="{{this.primaryimageurl}}"></img></td>
+      <td><a href="{{object.url}}">See More</a></td>
+    </tr>
+  {{/each}}
+</table>
