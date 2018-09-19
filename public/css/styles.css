@@ -1,17 +1,3 @@
-.title {
-    text-align: center;
-}
-
-a {
-    text-decoration: underline;
-    color: blue;
-    cursor: pointer;
-}
-
-th, td {
-    padding: 5px;
-}
-
 .gallery-image {
-    width: 80px;
+    width: 100px;
 }

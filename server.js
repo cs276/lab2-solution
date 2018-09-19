@@ -17,7 +17,7 @@ app.use('/css', express.static('public/css'));
 const API_KEY = '43a19a70-b76e-11e8-bf0e-e9322ccde4db';
 
 app.get('/', (req, res) => {
-  const url = `https://api.harvardartmuseums.org/gallery?size=50&apikey=${API_KEY}`;
+  const url = `https://api.harvardartmuseums.org/gallery?size=100&apikey=${API_KEY}`;
   fetch(url)
   .then(response => response.json())
   .then(data => {
@@ -38,8 +38,8 @@ app.get('/object/:object_id', function(req, res) {
   const url = `https://api.harvardartmuseums.org/object/${req.params.object_id}?apikey=${API_KEY}`;
   fetch(url)
   .then(response => response.json())
-  .then(object => {
-    res.render('object', {title: "Artifact Information", object: object});
+  .then(data => {
+    res.render('object', {title: "Artifact Information", object: data});
   });
 });
 

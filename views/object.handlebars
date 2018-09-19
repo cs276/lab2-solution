@@ -1,8 +1,16 @@
 <h1>Object Information</h1>
 <ul>
+  {{#if object.title}}
   <li>Title: {{object.title}}</li>
+  {{/if}}
+  {{#if object.description}}
   <li>Description: {{object.description}}</li>
+  {{/if}}
+  {{#if object.provenance}}
   <li>Provenance: {{object.provenance}}</li>
+  {{/if}}
+  {{#if object.accessionyear}}
   <li>Accession Year: {{object.accessionyear}}</li>
+  {{/if}}
 </ul>
 <img class='gallery-image' src="{{object.primaryimageurl}}"></img>
