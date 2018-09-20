@@ -1,0 +1,16 @@
+<%- include('header') %>
+
+<h1>Object Information</h1>
+<ul>
+  <li>Title: <%- object.title %></li>
+  <% if (object.description != undefined) { %>
+  <li>Description: <%- object.description %></li>
+  <% } %>
+  <% if (object.provenance != undefined) { %>
+  <li>Provenance: <%- object.provenance %></li>
+  <% } %>
+  <li>Accession Year: <%- object.accessionyear %></li>
+</ul>
+<img width='50%' src="<%- object.primaryimageurl %>"></img>
+
+<%- include('footer') %>

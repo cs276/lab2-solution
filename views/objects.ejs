@@ -1,0 +1,21 @@
+<%- include('header') %>
+
+<h1>Object Listing</h1>
+<h2>Gallery <%- gallery %></h2>
+<table class='table table-striped'>
+  <% objects.forEach(object => { %>
+    <tr>
+      <td>
+        <a href="/object/<%- object.id %>"><%- object.title %></a>
+      </td>
+      <td>
+        <img width='100px' src="<%- object.primaryimageurl %>"></img>
+      </td>
+      <td>
+        <a href="<%- object.url %>">More Information</a>
+      </td>
+    </tr>
+  <% }); %>
+</table>
+
+<%- include('footer') %>
