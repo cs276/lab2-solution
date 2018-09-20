@@ -43,7 +43,6 @@ app.get('/object/:object_id', function(req, res) {
 });
 
 app.get('/object/:object_id/comment', function(req, res) {
-  const comment = console.log(req.query.comment);
   if (comments[req.params.object_id] === undefined) {
     comments[req.params.object_id] = [];
   }
