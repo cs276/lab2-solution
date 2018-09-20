@@ -11,6 +11,18 @@
   <% } %>
   <li>Accession Year: <%- object.accessionyear %></li>
 </ul>
+
+<h2>Comments</h2>
+<ul>
+  <% comments.forEach(comment => {  %>
+    <li><%- comment %></li>
+  <% }) %>
+</ul>
+<form action="/object/<%- object.id %>/comment">
+  <input class="form-control" type="text" name="comment">
+  <button class="btn btn-primary" type="submit">Add Comment</button>
+</form>
+
 <img width='50%' src="<%- object.primaryimageurl %>"></img>
 
 <%- include('footer') %>
